@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Thumbnails
+._*
+# Files that might appear on external or thumb drives
+.Spotlight-Vignette
+.Trashes
+.AppleDesktop
+
+# Docker
+*.log
+Dockerfile.*.bak
+
+# Docker Volumes
+!common/*.tar.gz
+common/
+*.tar.gz
+*.tar
+
+# cypress
+cypress/videos/
+cypress/screenshots/
+
+# git
+*.orig
+
+# JavaScript/Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log*
+.pnpm-debug.log*
+
+# WebStorm / IntelliJ / JetBrains IDEs
+.idea/
+*.iml
+
