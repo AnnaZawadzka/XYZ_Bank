@@ -15,10 +15,11 @@ describe('XYZ Bank app', () => {
         cy.get(LOCATORS.BALANCE_LABEL).should('contain', expectedSum.toString());
         cy.get(LOCATORS.TRANSACTIONS_BUTTON).click();
 
-        cy.get(LOCATORS.AMOUNT_COLUMNS).should('be.visible');
+        cy.get(LOCATORS.AMOUNT_COLUMNS, {timeout: 10000}).should('be.visible');
 
         let sum = 0;
-        cy.get(LOCATORS.AMOUNT_COLUMNS).each(($cell) => {
+        cy.get(LOCATORS.AMOUNT_COLUMNS)
+            .each(($cell) => {
             let value = parseFloat($cell.text().trim());
             if (!isNaN(value)) {
                 sum += value;
