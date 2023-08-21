@@ -1,0 +1,31 @@
+Project Bank XYZ
+
+Project use a following technologies:
+- Node.js,
+- Cypress,
+- Docker image provided by Cypress
+- GitHub Actions.
+
+Installation & Setup
+Clone the repository:
+
+git clone https://github.com/AnnaZawadzka/XYZ_Bank
+cd XYZ_BANK
+
+Install dependencies:
+
+npm install
+
+Testing
+
+To run Cypress tests:
+
+npm run cypress:open
+
+or run from script:
+
+cypress run --config video=false
+
+GitHub Actions
+In this project, we utilize GitHub Actions to automatically run Cypress tests every time code is pushed int master branch
+You can check the test status in the "Actions" tab of the GitHub repository.
