@@ -8,9 +8,20 @@ export const loginUser = (userName) => {
     cy.get(LOCATORS.LOGIN_BUTTON).click();
 }
 
-export const makeDeposit  = (amount) => {
-    cy.get(LOCATORS.DEPOSIT_SECTION_BUTTON).click();
-    cy.get(LOCATORS.AMOUNT_INPUT).type(amount);
-    cy.get(LOCATORS.DEPOSIT_CONFIRM_BUTTON).click();
-    cy.get(LOCATORS.CONFIRMATION_MESSAGE).should('contain', 'Deposit Successful');
+export const makeDeposit = (amount) => {
+    cy.get(LOCATORS.DEPOSIT_SECTION_BUTTON)
+        .should('be.visible')
+        .click()
+        .then(() => {
+            cy.get(LOCATORS.AMOUNT_INPUT).should('be.visible').type(amount)
+                .then(() => {
+                    cy.get(LOCATORS.DEPOSIT_CONFIRM_BUTTON, {timeout: 10000})
+                        .should('be.visible').click();
+                })
+                .then(() => {
+                    cy.get(LOCATORS.CONFIRMATION_MESSAGE)
+                        .should('be.visible')
+                        .should('contain', 'Deposit Successful');
+                });
+        })
 }
