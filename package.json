@@ -3,6 +3,6 @@
     "cypress": "^12.17.4"
   },
   "scripts": {
-    "cypress:run": "cypress run --config video=false"
+    "cypress:run": "cypress run"
   }
 }

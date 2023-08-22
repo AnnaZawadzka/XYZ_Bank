@@ -15,6 +15,5 @@ export const LOCATORS = {
     TRANSACTIONS_BUTTON: 'button[ng-click="transactions()"]',
 
     //Amount Page
-   // AMOUNT_COLUMNS: '.table tbody td:nth-child(2)',
     AMOUNT_COLUMNS: 'tr[id*="anchor"] td:nth-child(2)',
 };
