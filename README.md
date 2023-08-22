@@ -31,7 +31,7 @@ npm run cypress:open
 ```
 ### Or run in headless mode:
 ```
-cypress run --config video=false
+cypress run
 ```
 
 ## GitHub Actions
